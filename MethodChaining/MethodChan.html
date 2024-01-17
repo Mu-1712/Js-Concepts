@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method Chaining</title>
+</head>
+<body>
+    <h1>Method Chaining</h1>
+
+    <script>
+
+        // without Method Chaining
+        // console.log("without Method Chaining")
+        //let userName = window.prompt("Enter userName:");
+    
+
+        // userName  = userName.trim();
+        // let Firstletter = userName.charAt(0);
+        // let FirstName = Firstletter.toUpperCase();
+
+        // let Remchars = userName.slice(1);
+        // Remchars = Remchars.toLowerCase();
+        // userName = FirstName + Remchars;
+
+        // console.log(userName);
+
+    //with Method Chaining
+     console.log("with Method Chaining")
+    let userName = window.prompt("Enter userName:");
+    userName  = userName.trim().charAt(0).toUpperCase() + userName.trim().slice(1).toLowerCase();
+    console.log(userName);
+    
+    </script>
+</body>
+</html>

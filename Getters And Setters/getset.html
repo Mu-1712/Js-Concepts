@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getters and Setters</title>
+</head>
+<body>
+    <script>
+        
+          class Rectangle{
+            constructor(width, height){
+                    this.width = width;
+                    this.height = height;
+            }
+            set width(newWidth){
+                if(newWidth > 0){
+                    return this._newWidth = newWidth ;
+                }else{
+                    console.log(`enter a positive width value`)
+                }
+            }
+            set height(newHeight){
+                if(newHeight > 0){
+                    return this._newHeight = newHeight;
+                }else{
+                    console.log(`enter a positive height value`)
+                }
+            }
+            get width(){
+                return this._newWidth;
+            }
+            get height(){
+                return this._newHeight;
+            }
+            get Area(){
+                return  this._newWidth * this._newHeight;// we can get area even if we dont assineg it in constructor
+            }
+          }
+          
+          const rectangle = new Rectangle(15, 45);
+
+          rectangle.width = 40;//we can modifi values of width and hieght
+          rectangle.height = 50;
+
+          console.log(`Getters and Setters: `);
+          console.log(`Width: ${rectangle.width}`);
+          console.log(`Height: ${rectangle.width}`);
+          console.log(`Area: ${rectangle.Area}`);
+
+    </script>
+</body>
+</html>

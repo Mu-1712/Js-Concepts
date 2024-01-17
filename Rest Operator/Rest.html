@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Operator</title>
+</head>
+<body>
+    <h1>Rest Operator</h1>
+
+    <script>
+        // Log an empty line for better readability in the console
+        console.log("");
+
+        // Log a header indicating the use of the Rest Operator
+        console.log("Rest Operator");
+
+        // Define a function "fastfoods" that uses the Rest Operator
+        function fastfoods(...foods){
+
+            // Log the array created by grouping elements using the Rest Operator
+            console.log(foods); // We are grouping elements into one array
+
+            // Log individual elements using the Spread Operator
+            console.log(...foods); // We are ungrouping the same elements into separate elements
+        }
+
+        // Define a function "getfoods" that also uses the Rest Operator
+        function getfoods(...foods){
+            
+            // Return the array created by grouping elements using the Rest Operator
+            return foods;
+        }
+
+        // Define some individual food items
+        const food1 = "pizza";
+        const food2 = "burger";
+        const food3 = "momos";
+        const food4 = "noodles";
+        const food5 = "panipuri";
+
+        // Call the "fastfoods" function with individual food items
+        fastfoods(food1, food2, food3, food4, food5);
+
+        // Call the "getfoods" function with individual food items and store the result in the "foods" variable
+        const foods = getfoods(food1, food2, food3, food4, food5);
+    </script>
+</body>
+</html>

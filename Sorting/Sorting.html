@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting</title>
+</head>
+<body>
+    
+    <script>
+
+const cars = [
+         {
+            name: 'Toyota Camry',
+            year: 2022,
+            price: 25000
+        },
+        {
+            name: 'Honda Accord',
+            year: 2021,
+            price: 23000
+        },
+        {
+             name: 'Ford Mustang',
+            year: 2023,
+            price: 35000
+        }
+  ];
+  
+  // Sorting cars based on name in alphabetical order
+  const carsByName = cars.slice().sort((a, b) => a.name.localeCompare(b.name));
+  console.log("Cars sorted by name:", carsByName);
+  
+  // Sorting cars based on year in ascending order
+  const carsByYearAscending = cars.slice().sort((a, b) => a.year - b.year);
+  console.log("Cars sorted by year (ascending):", carsByYearAscending);
+  
+  // Sorting cars based on price in descending order
+  const carsByPriceDescending = cars.slice().sort((a, b) => b.price - a.price);
+  console.log("Cars sorted by price (descending):", carsByPriceDescending);
+    </script>
+</body>
+</html>

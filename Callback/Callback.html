@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Back</title>
+</head>
+<body>
+    <h1>Call Back</h1>
+
+    <script>
+          console.log("CallBack Method")
+        hello(bye);
+
+        function hello(callback){
+                console.log("Hello there!");
+                callback();
+        }
+
+        function bye(){
+                console.log("bye babe!");
+        }
+
+                //2nd example
+            console.log("CallBacks 2nd example")
+            sum(Display, 3, 5)
+        function sum(callback, s,d){
+                let result = s + d;
+                callback(result);
+        }
+
+        function Display(result){
+                console.log(`the sum is: ${result}`);
+        }
+    </script>
+<!-- OUTPUT
+CallBack Method
+ Hello there!
+ bye babe!
+ CallBacks 2nd example
+ the sum is: 8 -->
+</body>
+</html>
+

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SuperWord</title>
+</head>
+<body>
+    <script>
+        class Animal1 {
+            constructor(name) {
+              this.name = name;
+            }
+          
+            Dogname(){
+                console.log(this.name);
+            }
+            Dogbreed(){
+                console.log(this.breed);
+            }
+            makeSound() {
+              console.log('Some generic sound');
+            }
+          }
+          
+          class Dog extends Animal1 {
+            constructor(name, breed) {
+              super(name); // calling the constructor of the superclass
+              this.breed = breed;
+            }
+          
+            makeSound() {
+              super.makeSound(); // calling the makeSound method of the superclass
+              console.log('Bark bark!');
+            }
+          }
+          console.log('Super Keyword:');
+          const myDog = new Dog('Buddy', 'Golden Retriever');
+          myDog.Dogname();
+          myDog.Dogbreed();
+          myDog.makeSound(); // output both the generic sound and "Bark bark!"
+
+    </script>
+</body>
+</html>

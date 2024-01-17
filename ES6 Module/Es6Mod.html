@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 Module</title>
+</head>
+<body>
+    
+
+    <script type="module">
+
+        console.log("ES6 Module")
+
+        import{ side, length, width, getareaSquare, 
+                getperimeterSquare, getareaRectangle, 
+                getperimeterRectangle}
+
+        from './MathUtil.js';
+
+        
+        console.log(`side: ${side}`);
+        console.log(`length: ${length}`);
+        console.log(`width: ${width}`);
+
+        console.log("")
+        const SquareArea = getareaSquare(side);
+        const SquarePerimeter = getperimeterSquare(side);
+        const RectangleArea = getareaRectangle(length, width);
+        const RectanglePerimeter = getperimeterRectangle(length, width);
+
+        console.log(`area of square : ${SquareArea}`);
+        console.log(`perimeter of square : ${SquarePerimeter}`);
+        console.log("")
+        console.log(`area of Rectangle : ${RectangleArea}`);
+        console.log(`perimeter of rectangle : ${RectanglePerimeter}`);
+
+    </script>
+</body>
+</html>

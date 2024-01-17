@@ -1,0 +1,26 @@
+#h1{
+    font-size: 3rem;
+}
+
+#MyButton{
+    font-size: 3rem;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: aqua;
+    color: black;
+}
+.enabled{
+    background-color: rgb(0, 4, 255);
+    color: aliceblue;
+    
+}
+.hover{
+    box-shadow: 0 0 10px black;
+    font-weight: bold;
+}
+.disabled{
+    background-color: rgb(66, 69, 241);
+    color: aliceblue;
+    
+}

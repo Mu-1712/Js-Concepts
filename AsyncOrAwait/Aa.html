@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async/Await</title>
+</head>
+<body>
+    
+    <h1>Async/Await</h1>
+
+    <script>
+
+function walkDog(){
+           return new Promise((resolve, reject) => {
+                setTimeout(() =>{
+
+                    const dogwalked = true;
+
+                    if(dogwalked){
+                        resolve("You walk the dog");
+                    }else{reject("You didn't walk the dog");}
+                    
+                }, 1500);
+            });
+       }
+       function cleankitchen(){
+           return new Promise((resolve, reject) => {
+               setTimeout(() =>{
+
+                const kitchenCleaned = true;
+
+                    if(kitchenCleaned){
+                        resolve("You cleaned the kitchen");
+                    }else{ reject("You didn't cleaned the kitchen");}
+                   
+                }, 2500);
+            });
+        }
+       function Taketrash(){
+            return new Promise((resolve, reject) => {
+                setTimeout(() =>{
+
+                    const Trashtakenout = true;
+
+                    if(Trashtakenout){
+                        resolve("Takeout the trash");
+                    }else{ reject("You haven't Takeout the trash");}
+                    
+                }, 500);
+            });
+        }
+
+        //advanced way to promises which is below...
+        //by this we can write code line by line
+        //not like by then => method inpromises
+
+        async function doWorks(){
+
+                const walkDogResult = await walkDog();
+                console.log(walkDogResult);
+
+                const cleankitchenResult = await cleankitchen();
+                console.log(cleankitchenResult);
+
+                const TaketrashResult = await Taketrash();
+                console.log(TaketrashResult);
+
+                console.log("You completed all works");
+        }
+
+        doWorks(); //calling doworks funtion
+
+
+        //Using Promises
+        // walkDog()
+        //     .then(value => {
+        //         console.log(value); 
+        //         return cleankitchen()
+        //     })
+        //     .then(value => {
+        //         console.log(value); 
+        //         return Taketrash()
+        //     })
+        //     .then(value => {
+        //         console.log(value); 
+        //         console.log("You finished all tasks")
+        //     })
+        //     .catch(error => console.error(error));
+
+    </script>
+</body>
+</html>

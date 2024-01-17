@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Constructors</title>
+</head>
+<body>
+    <script>
+        
+        //Constructor solve the problem creating many objects inJS
+        //here we define Constructor using that we can create as many as objects
+        function Car(name, model, year, color){
+            this.name = name;
+            this.model = model;
+            this.year = year;
+            this.color = color;
+        }
+
+        const car1 = new Car("Mustang", "f1", "1997", "Black");
+        const car2 = new Car("Benze", "f2", "1999", "White");
+        
+        console.log("Constructors: ")
+        console.log("Car1 Details: ")
+        console.log(car1.name)
+        console.log(car1.model)
+        console.log(car1.year)
+        console.log(car1.color)
+        console.log("Car2 Details: ")
+        console.log(car2.name)
+        console.log(car2.model)
+        console.log(car2.year)
+        console.log(car2.color)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Keyword</title>
+</head>
+<body>
+    <script>
+    
+        
+        class MathUtil{
+            static PI = 3.14;
+
+            static getdiameter(radius){
+                return `Radis: ${radius * 2}`;
+            }
+            static getcircumference(radius){
+                return `Circumference: ${(this.PI * radius * 2).toFixed(2)}`; //here this refers to classMathUtil
+            }
+            static getarea(radius){
+                return `Area: ${this.PI * radius * radius}`;
+            }
+        }
+        
+        console.log("Static Keyword: ");
+        console.log(`PI =${MathUtil.PI}`);
+        console.log(MathUtil.getdiameter(20));
+        console.log(MathUtil.getcircumference(20));
+        console.log(MathUtil.getarea(20));
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+[{
+    "name": "Asta",
+    "age": 19,
+    "isPowerfull": true
+},
+{
+    "name": "Naruto",
+    "age": 20,
+    "isPowerfull": true
+    
+},
+{
+    "name": "Tanjiro",
+    "age": 25,
+    "isPowerfull": true
+},
+{
+    "name": "Goku",
+    "age": 30,
+    "isPowerfull": true
+}]

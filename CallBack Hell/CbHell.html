@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call Back Hell</title>
+</head>
+<body>
+    <h1>Call Back Hell</h1>
+
+
+<script>
+
+    function task1(callback){
+        setTimeout(() =>{
+        console.log("Task1 IS Done");
+        callback();
+    }, 4000);
+    }
+    function task2(callback){
+        setTimeout(() =>{
+        console.log("Task2 IS Done");
+        callback();
+    }, 2000);
+    }
+    function task3(callback){
+        setTimeout(() =>{
+        console.log("Task3 IS Done");
+        callback();
+    }, 1000);
+    }
+    function task4(callback){
+        setTimeout(() =>{
+        console.log("Task4 IS Done");
+        callback();
+    }, 3000);
+    }
+
+task1(() => {
+    task2(() => {
+        task3(() =>{
+            task4(() =>{
+                console.log("All Tasks are Done");
+            });
+        });
+    });
+});
+task2();
+task3();
+task4();
+    </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise's</title>
+</head>
+<body>
+    <h1>Promise's</h1>
+
+    <script>
+
+//Using Promises:
+        function walkDog(){
+           return new Promise((resolve, reject) => {
+                setTimeout(() =>{
+
+                    const dogwalked = true;
+
+                    if(dogwalked){
+                        resolve("You walk the dog");
+                    }else{reject("You didn't walk the dog");}
+                    
+                }, 1500);
+            });
+       }
+       function cleankitchen(){
+           return new Promise((resolve, reject) => {
+               setTimeout(() =>{
+
+                const kitchenCleaned = true;
+
+                    if(kitchenCleaned){
+                        resolve("You cleaned the kitchen");
+                    }else{ reject("You didn't cleaned the kitchen");}
+                   
+                }, 2500);
+            });
+        }
+       function Taketrash(){
+            return new Promise((resolve, reject) => {
+                setTimeout(() =>{
+
+                    const Trashtakenout = false;
+
+                    if(Trashtakenout){
+                        resolve("Takeout the trash");
+                    }else{ reject("You haven't Takeout the trash");}
+                    
+                }, 500);
+            });
+        }
+        walkDog()
+            .then(value => {
+                console.log(value); 
+                return cleankitchen()
+            })
+            .then(value => {
+                console.log(value); 
+                return Taketrash()
+            })
+            .then(value => {
+                console.log(value); 
+                console.log("You finished all tasks")
+            })
+            .catch(error => console.error(error));
+
+    // Using CallBack Hell 
+    //     function walkDog(callback){
+           
+    //         return new Promise((resolve, reject) => {
+    //             setTimeout(() =>{
+    //             console.log("You walk the dog");
+    //             callback();
+    //         }, 1500);
+    //         });
+    //     }
+    //     function cleankitchen(callback){
+    //         setTimeout(() =>{
+    //             console.log("You clean the kitchen");
+    //             callback();
+    //         }, 2500);
+    //     }
+    //     function Taketrash(callback){
+    //         setTimeout(() =>{
+    //             console.log("Takeout the trash");
+    //             callback();
+    //         }, 500);
+    //     }
+
+    //    // CallBack Hell
+    //     walkDog(() =>{
+    //         cleankitchen(() =>{
+    //             Taketrash(() =>{
+    //                 console.log("All tasks completed");
+    //             })
+    //         })
+    //     })
+
+
+    </script>
+</body>
+</html>

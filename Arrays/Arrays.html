@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <h1>Arrays</h1>
+
+    <script>
+        let fruits = ["banana", "Mango", "grapes", "apple"];
+
+        fruits.push("coconut");//insert an element coconut
+        fruits.pop("coconut"); //delete an element coconut
+        fruits.unshift("melon") // same as push
+        fruits.shift("melon") //same as pop
+        console.log(fruits);
+
+        let Numoffruits = fruits.length;
+        console.log(`number of fruits: ${Numoffruits}`);
+
+        let index = fruits.indexOf("grapes");
+        console.log(`index: ${Numoffruits}`);
+
+        Array = fruits.toReversed();
+        console.log(Array);
+    </script>
+</body>
+</html>

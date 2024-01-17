@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Objects</title>
+</head>
+<body>
+    <script>
+        // Assuming the current date and time
+  console.log("")
+  console.log("DATE")
+  const myDate = new Date(); 
+  console.log("Date :")
+
+// Get year
+const year = myDate.getFullYear();
+
+// Get month (returns a zero-based index, so January is 0, February is 1, and so on)
+const month = myDate.getMonth() + 1; // Adding 1 to convert to one-based index
+
+// Get day of the month
+const day = myDate.getDate();
+
+// Get hour
+const hour = myDate.getHours();
+
+// Get minute
+const minute = myDate.getMinutes();
+
+// Get day of the week (returns a zero-based index, so Sunday is 0, Monday is 1, and so on)
+const dayOfWeek = myDate.getDay();
+
+// Creating an array of day names for better readability
+const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+const dayName = daysOfWeek[dayOfWeek];
+
+console.log('Year:', year);
+console.log('Month:', month);
+console.log('Day:', day);
+console.log('Hour:', hour);
+console.log('Minute:', minute);
+console.log('Day of the Week:', dayName);
+    </script>
+</body>
+</html>

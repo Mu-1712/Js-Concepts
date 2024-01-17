@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input From User</title>
+</head>
+<body>
+    <h1>Input From User</h1>
+    
+     <h1>Input From the user</h1>
+     <label>username:</label>
+     <input id="text"><br><br>
+     <button id="Submit">ClickMe</button>
+     <h2 id="user"></h2>
+ 
+     <!-- Constants..Area of a Circle: -->
+     <h1>Area of Circle</h1>
+     <label>Radius:</label>
+     <input type="text" id="radiusInput"><br><br>
+     <button onclick="calculateArea()">Calculate</button>
+ 
+     <h2 id="result"></h2>
+ 
+     <script>
+
+        //Input From the User..Window Method(easy way)
+        // let username  = window.prompt(`whats your username`);
+        // console.log(username)
+
+        //Input From the User..proffesional Method
+        let username;
+        document.getElementById("Submit").onclick = function(){
+        username = document.getElementById("text").value;
+        document.getElementById("user").innerText = `Username: ${username}`;
+        }
+
+        function calculateArea() {
+            // Get the radius value from the user input
+            let radius = document.getElementById("radiusInput").value;
+
+            // Check if the input is a valid number
+            if (isNaN(radius) || radius === "") {
+                alert("Please enter a valid number for the radius.");
+                return;
+            }
+
+            // Calculate the area of the circle
+            let area = Math.PI * Math.pow(parseFloat(radius), 2);
+
+            // Display the result
+            document.getElementById("result").innerText = "Area: " + area.toFixed(2);
+        }
+     </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Files</title>
+</head>
+<body>
+    <h1>JSON FILES</h1>
+    <h1> JS OBJECT CONVERT TO JSON STRING</h1>
+
+    <script>
+
+        const names = ["Asta", "Tanjiro", "Naruto", "Goku"];
+        //const jsonString = JSON.stringify(names);
+
+        const person = {
+                "name": "Asta",
+                "age": 30,
+                "isPowerfull": true,
+        }
+
+        // const jsonString = JSON.stringify(person);
+        // console.log(jsonString);
+
+        const people = [{
+            "name": "Asta",
+            "age": 19,
+            "isPowerfull": true
+        },
+        {       
+            "name": "Naruto",
+            "age": 20,
+            "isPowerfull": true
+        },
+        {       
+            "name": "Tanjiro",
+            "age": 25,
+            "isPowerfull": true
+        },
+        {
+            "name": "Goku",
+            "age": 30,
+            "isPowerfull": true
+        }       
+        ]
+        const jsonString = JSON.stringify(people);
+        console.log(jsonString);
+        console.log(people);
+
+
+    </script>
+</body>
+</html>

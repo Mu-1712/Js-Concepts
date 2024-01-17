@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checked Property</title>
+</head>
+<body>
+    <h1> Checked Property</h1>
+    <input type="checkbox", id="mycheckbox">
+    <label for="mycheckbox">Terms</label><br>
+
+    <input type="radio", id="AgreeBtn">
+    <label for="AgreeBtn">Agree</label><br>
+    <input type="radio", id="DisagreeBtn">
+    <label for="DisagreeBtn">Disagre</label><br>
+    <input type="radio", id="RejectBtn">
+    <label for="RejectBtn">Reject</label><br><br>
+
+    <button type="submit" id="submitBtn">Submit</button>
+
+    <p id="checkboxoutput"></p>
+    <p id="radioOutput"></p>
+
+
+    <script>
+
+        const mycheckbox = document.getElementById("mycheckbox")
+        const AgreeBtn = document.getElementById("AgreeBtn")
+        const DisagreeBtn = document.getElementById("DisagreeBtn")
+        const RejectBtn = document.getElementById("RejectBtn")
+        const submitBtn = document.getElementById("submitBtn")
+        const checkboxoutput = document.getElementById("checkboxoutput")
+        const radioOutput= document.getElementById("radioOutput")
+
+        submitBtn.onclick = function(){
+            if(mycheckbox.checked){
+                checkboxoutput.textContent = `You agreed to Terms`;
+            }
+        else{checkboxoutput.textContent = `Plz click Terms checkbox`;}
+
+            if(AgreeBtn.checked){
+                radioOutput.textContent = `i agreed to Terms`;
+            }
+                else if(DisagreeBtn.checked){
+                            radioOutput.textContent = `i disagreed to Terms`;}
+                else if(RejectBtn.checked){
+                            radioOutput.textContent = `i Reject to Terms`;}
+       
+            else{radioOutput.textContent = `Select an option`;} 
+
+        }
+    </script>
+</body>
+</html>

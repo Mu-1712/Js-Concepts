@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constants</title>
+</head>
+<body>
+    <h1>Constants</h1>
+    <label>Radius:</label>
+    <input type="text" id="mytext"><br><br>
+    <button id="Mysubmit">Submit</button>
+    <h2 id="myh2"></h2>
+
+
+    <script>
+
+        // const PI = 3.14;
+        // radius = window.prompt("Enter radius:");
+        // radius  = Number(radius);
+        // Area = 2 * PI * radius * radius;
+        // console.log(Area);
+
+        const PI = 3.14;
+        let radius;
+        let Area;
+
+        document.getElementById("Mysubmit").onclick = function(){
+        radius = document.getElementById("mytext").value;
+        radius = Number(radius);
+        Area =  2 * PI * radius * radius;
+
+        document.getElementById("myh2").textContent =   Area + "cm";
+
+}
+    </script>
+</body>
+</html>

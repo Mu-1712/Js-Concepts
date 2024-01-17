@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous Code</title>
+</head>
+<body>
+    
+    <script>
+        console.log("Asynchronous code:");
+
+        // setTimeout(() => {
+        //     console.log("Task 1");
+        // }, 5000);
+
+        // console.log("Task 2 done");
+        // console.log("Task 3 done");
+        // console.log("Task 4 done");
+
+        console.log("Handling Asynchronous code with callbacks:");
+
+        function func1(callback) {
+            setTimeout(() => { 
+
+                console.log("Task 1");
+                callback();
+            },5000);
+        }
+
+            function func2() {
+            console.log("Task 2 done");
+            console.log("Task 3 done");
+            console.log("Task 4 done");
+        }
+
+        func1(func2);
+
+    </script>
+</body>
+</html>

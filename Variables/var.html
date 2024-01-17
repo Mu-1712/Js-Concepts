@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+</head>
+<body>
+
+     <h1>Variables</h1>
+     <p id="p1"></p>
+     <p id="p2"></p>
+     <p id="p3"></p>
+
+    <script>
+
+let lastName = "Muhammad";
+let isMarried = false;
+console.log(typeof lastName)
+console.log(`You are ${lastName} Right?`);
+console.log(`Married : ${isMarried}`)
+
+let firstName = "Musharraf";
+let age = 23;
+let Ismen = true;
+// here p1,p2,p3are retrieved from varibles sectoin of html file
+document.getElementById("p1").textContent = `youe name is ${firstName}`;
+document.getElementById("p2").textContent = `you are ${23} years old`;
+document.getElementById("p3").textContent = `Men ${Ismen}`;
+
+    </script>
+</body>
+</html>

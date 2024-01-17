@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array OF Objects</title>
+</head>
+<body>
+    
+    <script>
+
+            console.log("Array of objects representing persons:")
+            const persons = [
+            {
+                firstName: 'John',
+                lastName: 'Doe',
+                age: 30,
+                city: 'New York'
+            },
+            {
+                firstName: 'Jane',
+                lastName: 'Smith',
+                age: 25,
+                city: 'San Francisco'
+            },
+            {
+                firstName: 'Bob',
+                lastName: 'Johnson',
+                age: 35,
+                city: 'Los Angeles'
+            }
+            
+        ];
+  
+            // Iterating through the array and printing information
+            console.log("")
+            persons.forEach(person => {
+                     console.log(`${person.firstName} ${person.lastName} (${person.age} years old) - ${person.city}`);
+                });
+            console.log("")
+            persons.push({firstName:'Dob', lastName:'Johnsina', age: 32,city:'Lil Stones'},)
+            console.log(`After Pushing:` , persons);
+            persons.pop();
+            console.log(`After Poping:` , persons);
+            persons.splice(0, 2);
+            console.log(`After Splicing:`, persons);
+
+            console.log("")
+            const FirstNames = persons.map(person => person.firstName);
+            console.log(`Mapping:`, FirstNames); //it gives bob after sclicing, as this method is after it
+
+            const LastNames = persons.filter(person => person.lastName);
+            console.log(`Filtering:`, LastNames);
+
+            const CityNames = persons.reduce(person => person.city);
+            console.log(`Reducing:`, CityNames);
+
+            // Array of objects representing cars
+            console.log("Array of objects representing cars ")
+            const Cars = [
+                    {
+                        Carname: 'Toyota Camry',
+                        year: 2022,
+                        price: 25000
+                    },
+                    {
+                        Carname: 'Honda Accord',
+                        year: 2021,
+                        price: 23000
+                    },
+                    {
+                        Carname: 'Ford Mustang',
+                        year: 2023,
+                        price: 35000
+                    }
+                    ];
+
+            console.log("")
+            Cars.forEach(car => {
+                     console.log(`${car.Carname} ${car.year} year Car (${car.price})`);
+            });
+
+            console.log("")
+            const Carname = Cars.map(Car => Car.Carname);
+            console.log(`Mapping:`, Carname); 
+
+            const year = Cars.filter(Car => Car.year);
+            console.log(`Filtering:`, year);
+
+            const totalPrices = Cars.reduce((acc, car) => acc + car.price, 0); // Initialize accumulator to 0
+            console.log(`Reducing (Total Price): $${totalPrices}`);
+
+  
+  
+
+
+    </script>
+</body>
+</html>

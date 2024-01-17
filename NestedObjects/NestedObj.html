@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Objects</title>
+</head>
+<body>
+
+    <script>
+
+        //Nested objects simple code
+        console.log("")
+            console.log("Nested Objects with simple code:")
+            
+            const lappy ={  //parent object
+                Company: "Dell",
+                Core: "i3",
+                StorageType:"SSD",
+                DeliveryAddress:{
+                                    DNo:"90-98-099",
+                                    City: "Guntur",
+                                    Country: "India"
+                }
+            }
+            console.log(lappy) //we are accessing parent obj
+            console.log(lappy.Company) //we are accessing Company property of child onbject, from parent obj
+
+            // Nested object with classes
+
+            console.log("Nested object with classes:")
+
+            class Lappy{
+                constructor(company, stoage, ram, ...address){
+                            this.company = company;
+                            this.stoage = stoage;
+                            this.ram = ram;
+                            this.address = new Adress(...address);
+                }
+            }
+            class Adress{
+                constructor(customer,street, city, country){
+                    this.customer = customer;
+                    this.street = street;
+                    this.city = city;
+                    this.country = country
+                }
+
+                            
+            }
+            const Lappy1 = new Lappy("Dell", "SSD", "16Gb", "Musharraf",
+                                                             "13A Magnum street",
+                                                              "Vijawada",
+                                                              "India");
+
+            const Lappy2 = new Lappy("Hp", "HDD", "12Gb",  "Mujahid",
+                                                            "13B Magnum street",
+                                                              "Vijawada",
+                                                              "India");
+
+            console.log(Lappy1)  //we are accessing child lappy1 obj
+            console.log(Lappy1.address) //we are accessing whole adress of child lappy1 obj
+            console.log(Lappy1.address.street)//we are accessing street propety of adress of child lappy1 obj
+            console.log(Lappy2)  //we are accessing child lappy2 obj
+            console.log(Lappy2.address)//we are accessing whole adress of child lappy2 obj
+            console.log(Lappy2.address.street)//we are accessing street propety of adress of child lappy2 obj
+    
+    </script>
+</body>
+</html>

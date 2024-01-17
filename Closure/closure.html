@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+<body>
+    
+    <script>
+        console.log("Closure: ")
+
+function createGame(){
+    let score = 0;
+    function incscore(points){
+        score += points;
+        console.log(`+${score}pts`);
+    
+    }
+    function deccscore(points){
+        score -= points;
+        console.log(`-${score}pts`);
+    
+    }
+    function getscore(points){
+          return score;
+    }
+        return {incscore, deccscore, getscore }    
+}
+    const game = createGame();
+    game.incscore(19);
+    game.deccscore(3);
+   console.log(`the final poins ae ${game.getscore()}pts`);
+    </script>
+</body>
+</html>

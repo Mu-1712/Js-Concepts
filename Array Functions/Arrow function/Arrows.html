@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+<body>
+    <script>
+        console.log("Array Function ");
+
+        const digits = [10, 15, 20, 25];
+
+        const Squares = digits.map((element) => Math.pow(element, 3));
+
+        const Odd = digits.filter((element) =>  element % 2 !== 0);
+
+        const Adds = digits.reduce((prev,next) => prev + next);
+
+        console.log(Squares);
+        console.log(Odd);
+        console.log(Adds);
+    </script>
+</body>
+</html>

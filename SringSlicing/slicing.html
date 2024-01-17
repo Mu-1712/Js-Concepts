@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> String Slicing</title>
+</head>
+<body>
+    <h1>String Slicing</h1>
+    
+    <script>
+
+        const personName = "Muhammad Musharraf"
+        let FirstName = personName.slice(0,9);
+        console.log(FirstName);
+        let LastName = personName.slice(9, 19);
+        console.log(LastName);
+
+        const Gmail = "Mshi4a1@gmail.com"
+        let Name = Gmail.slice(0, Gmail.indexOf("@"));
+        let Extension = Gmail.slice(Gmail.indexOf("@") +1);
+        console.log(Name)
+        console.log(Extension)
+        
+    </script>
+</body>
+</html>

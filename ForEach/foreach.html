@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForEach</title>
+</head>
+<body>
+    <h1>ForEach</h1>
+
+    <script>
+
+        console.log("ForEach Method")
+
+            let aa = [1, 2, 3, 4, 5];
+
+            aa.forEach(double);
+            aa.forEach(display);
+
+        function display(){
+            console.log(aa);
+        }
+        function double(element, index, array){
+             array[index] = element * 2;
+             
+         }
+
+            let bikes = ["pulsur", "yamaha", "fz-200"];
+
+                bikes.forEach(capatalize);
+   
+                bikes.forEach(displaybikes);
+
+        function displaybikes(element){
+                console.log(element);
+        }
+        function uppercase(element, index, array){
+                array[index] = element.toUpperCase();
+             
+        }
+        function capatalize(element, index, array){
+                array[index] = element.charAt(0).toUpperCase() + element.slice(1);
+        
+        }
+    </script>
+</body>
+</html>

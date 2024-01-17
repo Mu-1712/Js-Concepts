@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Objects</title>
+</head>
+<body>
+    
+    <script>
+
+        
+        const vehicle1 = {
+            Name : "Musharaf",
+            carname : "Swift",
+            model : "2021",
+            speed : "200Kmph",
+            about : function(){ console.log("This is Swift using Function");},//using Function
+            drive : function(){ console.log(`${this.Name} is driving ${this.carname}`);}
+        }
+        const vehicle2 = {
+            Name : "Muhammad",
+            carname : "Ferari",
+            model : "2000",
+            highspeed : "400Kmph",
+            about : () => console.log("This is Ferari using Array funtion"),   //using Array funtion
+            drive : function(){ console.log(`${this.Name} is driving ${this.carname}`);}
+        }
+
+        console.log("JavaScript Objects")
+        vehicle1.about();
+        vehicle1.drive();
+        console.log(vehicle1);
+        vehicle2.about();
+        vehicle2.drive();
+        console.log(vehicle2);
+
+    </script>
+</body>
+</html>

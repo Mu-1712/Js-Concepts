@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+    <script>
+        
+        
+          //Destructuring -->5ways 
+          //1) Swap two values:
+          console.log("")
+          console.log(`Destructuring:`)
+          console.log(`1) Swap two values:`)
+          let a1 = 21;
+          let b1 = 32;
+
+          [a1, b1] = [b1, a1];
+          console.log(a1, b1)
+
+          //2) Swap two elements in array:
+          console.log(`2) Swap two elements in array::`)
+          const colors = ["red", "blue", "green", "black"];
+
+          [colors[1], colors[3] = colors[3],colors[1] ];
+          console.log(colors);
+
+          //3) Assign elements in array to variables:
+          console.log(`3) Assign elements in array to variables:`)
+          const [firstcolor, secondcolor, ...extracolor] = colors; 
+          console.log(`firstcolor: ${firstcolor}`);
+          console.log(`secondcolor:${secondcolor}`);
+          console.log(`extracolor:  ${extracolor}`);
+
+           //4) Extract Values from Objects:
+           console.log(`4) Extract Values from Objects::`)
+
+          const vehicles = {
+            myName : "Musharaf",
+            carname : "Swift",
+            model : "2021",
+            speed : "200Kmph",
+            
+        }
+        const {myName,carname, model, speed} = vehicles;
+        console.log(`MyName:  ${myName}`,`Carname:  ${carname}`);
+        console.log(`Model:  ${model}` ,`Speed:  ${speed}`);
+
+        //5) Using object destructuring in function parameters
+        console.log(`5) destructuring in function parameters`);
+
+        function printPersonDetails({ firstName, lastName, age }) {
+            console.log(`${firstName} ${lastName} is ${age} years old.`);
+        }
+
+            const person = {
+                firstName: 'John',
+                lastName: 'Doe',
+                age: 30
+            };
+
+            printPersonDetails(person);
+    </script>
+</body>
+</html>

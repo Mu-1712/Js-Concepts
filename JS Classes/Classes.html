@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Classes</title>
+</head>
+<body>
+    <script>
+        class Products{
+            static count = 0;
+            constructor(name, price){
+                this.name = name;
+                this.price = price;
+                Products.count++;
+            }
+            display(){
+                console.log(`Name: ${this.name}`);
+                console.log(`price: $${this.price}`);
+                console.log(`Count: ${Products.count}`)
+            }
+            static gettotalproducts(){
+                console.log(`There are total ${Products.count} products...`);
+            }
+        }
+    
+        const product1 = new Products("Shirt", "400");
+        const product2 = new Products("Pant", "670");
+        
+        console.log("Classess")
+        product1. display();
+        product2. display();
+        Products.gettotalproducts();
+    </script>
+</body>
+</html>

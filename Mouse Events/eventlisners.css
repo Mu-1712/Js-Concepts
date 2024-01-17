@@ -1,0 +1,28 @@
+#Box{
+    background-color: magenta;
+    width: 400px;
+    height: 400px;
+    font-size: 3.5rem;
+    display: flex;
+    align-items: center;
+}
+
+body{
+    margin: 0;
+}
+#MyBox{
+    background-color: rgb(47, 15, 255);
+    width: 100px;
+    height: 100px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#myBtn{
+    background-color: rgb(0, 0, 0);
+    color: aqua;
+    font-size: 3.5rem;
+}

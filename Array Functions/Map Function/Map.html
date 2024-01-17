@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Function</title>
+</head>
+<body>
+    <script>
+        console.log("MAP")
+        const dates = ["2024-1-22", "2025-2-21", "2026-4-23"];
+        const formatdates = dates.map(formateddates); // Corrected function invocation
+        console.log(formatdates);
+        
+        function formateddates(element) {
+          const parts = element.split("-");
+          return `${parts[1]}/${parts[2]}/${parts[0]}`; // Added semicolon
+        }
+    </script>
+</body>
+</html>
